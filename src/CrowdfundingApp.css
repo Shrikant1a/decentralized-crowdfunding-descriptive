@@ -1,0 +1,123 @@
+.container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background: #1e1e2f;
+  color: #eee;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #4e54c8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  animation: fadeInDown 1s ease forwards;
+}
+
+.contribute-section {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  width: 150px;
+  outline: none;
+}
+
+.btn {
+  background: #4e54c8;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #3b3f9a;
+  animation: pulse 1.5s infinite;
+}
+
+.status {
+  margin-top: 1rem;
+  min-height: 1.5rem;
+  font-weight: bold;
+  color: #ffcc00;
+  animation: fadeIn 1s ease forwards;
+}
+
+.progress-bar {
+  margin-top: 2rem;
+  height: 20px;
+  background: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px #000;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #4e54c8, #8f94fb);
+  width: 0;
+  animation: growWidth 2s ease forwards;
+  border-radius: 10px 0 0 10px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  } to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  } to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes growWidth {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .input {
+    width: 100px;
+  }
+}
